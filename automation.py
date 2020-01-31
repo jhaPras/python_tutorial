@@ -6,12 +6,12 @@ from bs4 import  BeautifulSoup
 browser = webdriver.Chrome('/usr/local/bin/chromedriver 2')
 page = browser.get('https://www.facebook.com/login')
 
-username = browser.find_element_by_name('email').send_keys('prasen.jha')
-password = browser.find_element_by_name('pass').send_keys('prasenjit@2211')
+username = browser.find_element_by_name('email').send_keys('your_username')
+password = browser.find_element_by_name('pass').send_keys('your_password')
 
 browser.find_element_by_id('loginbutton').click()
 
-
+## this part is not working properly, it can write something in feed but cannot post it.
 browser.find_element_by_name('xhpc_message').send_keys('just a post written by my bot ! if you think it\'s cool give a thumbs up')
 WebDriverWait(browser,5)
 browser.find_element_by_class_name('_1se_').click()
